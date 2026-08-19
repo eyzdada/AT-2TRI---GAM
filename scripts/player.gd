@@ -44,3 +44,4 @@ func _update_animation(direction: float, pode_andar: bool) -> void:
 		animated_sprite.play("run")
 	else:
 		animated_sprite.play("idle")
+		
