@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://cwlij7dxjg5we" path="res://artes/Ambiente/Decorativos/rock.png" id="4_rock"]
 [ext_resource type="Texture2D" uid="uid://bap4uf5b8ahgp" path="res://artes/Ambiente/Decorativos/pine.png" id="5_pine"]
 [ext_resource type="PackedScene" uid="uid://dm4llwt7k3v50" path="res://scenes/player.tscn" id="6_player"]
-[ext_resource type="PackedScene" path="res://scenes/placa.tscn" id="7_placa"]
+[ext_resource type="PackedScene" uid="uid://dpmjikj1kt488" path="res://scenes/placa.tscn" id="7_placa"]
 [ext_resource type="PackedScene" uid="uid://dirpvn4q6s02i" path="res://scenes/cereja.tscn" id="8_cereja"]
 [ext_resource type="PackedScene" uid="uid://c526ioqdthqs3" path="res://scenes/inimigo.tscn" id="9_inimigo"]
 [ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="10_killzone"]
@@ -67,7 +67,7 @@ position = Vector2(1128, 182)
 [node name="Placa" parent="." unique_id=1807670692 instance=ExtResource("7_placa")]
 position = Vector2(1200, 182)
 
-[node name="Mensagem" parent="Placa" index="2"]
+[node name="Mensagem" parent="Placa" index="2" unique_id=1491754567]
 offset_left = -248.0
 offset_top = -79.0
 offset_right = -136.0
