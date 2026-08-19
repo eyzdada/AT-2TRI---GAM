@@ -6,7 +6,6 @@ extends Area2D
 func _ready() -> void:
 	body_entered.connect(_on_body_entered)
 	
-	# Se tiver uma animação configurada no AnimatedSprite2D, dá play nela
 	if $AnimatedSprite2D.sprite_frames and $AnimatedSprite2D.sprite_frames.has_animation("default"):
 		$AnimatedSprite2D.play("default")
 
