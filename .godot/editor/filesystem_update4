@@ -10,3 +10,4 @@ res://scripts/placa.gd
 res://scripts/PowerUp.gd
 res://scenes/PowerUp.tscn
 res://scenes/placa.tscn
+res://scenes/hud.tscn
