@@ -13,9 +13,6 @@
 [ext_resource type="PackedScene" uid="uid://cehldju8r0g0w" path="res://scenes/hud.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="12_pause"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4msk"]
-size = Vector2(25, 15)
-
 [node name="Level" type="Node2D" unique_id=1324155158]
 
 [node name="Fundo" type="CanvasLayer" parent="." unique_id=1676177017]
@@ -43,10 +40,6 @@ texture = ExtResource("3_bush")
 [node name="Pedra" type="Sprite2D" parent="Decoracao" unique_id=1004459483]
 position = Vector2(592, 185)
 texture = ExtResource("4_rock")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoracao/Pedra" unique_id=1333713088]
-position = Vector2(1.5, -0.5)
-shape = SubResource("RectangleShape2D_r4msk")
 
 [node name="Pinheiro" type="Sprite2D" parent="Decoracao" unique_id=1423531173]
 position = Vector2(1200, 127)
