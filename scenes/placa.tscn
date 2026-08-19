@@ -1,4 +1,4 @@
-[gd_scene format=3]
+[gd_scene format=3 uid="uid://dpmjikj1kt488"]
 
 [ext_resource type="Script" uid="uid://coqd0v8funs5t" path="res://scripts/placa.gd" id="1_scr"]
 [ext_resource type="Texture2D" uid="uid://dopf1b0186smr" path="res://artes/Ambiente/Decorativos/sign.png" id="2_sign"]
@@ -6,16 +6,16 @@
 [sub_resource type="RectangleShape2D" id="Rect_placa"]
 size = Vector2(44, 40)
 
-[node name="Placa" type="Area2D"]
+[node name="Placa" type="Area2D" unique_id=1862378962]
 script = ExtResource("1_scr")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=350447326]
 texture = ExtResource("2_sign")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1214302921]
 shape = SubResource("Rect_placa")
 
-[node name="Mensagem" type="Label" parent="."]
+[node name="Mensagem" type="Label" parent="." unique_id=1491754567]
 offset_left = -56.0
 offset_top = -46.0
 offset_right = 56.0
@@ -24,6 +24,7 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 4
 theme_override_font_sizes/font_size = 10
+text = "Fase concluida! Ao todo eram"
 horizontal_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="10_killzone"]
 [ext_resource type="PackedScene" uid="uid://cehldju8r0g0w" path="res://scenes/hud.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="12_pause"]
+[ext_resource type="Script" uid="uid://d1ncxegmtf3ri" path="res://scripts/PowerUp.gd" id="13_64w2a"]
 
 [node name="Level" type="Node2D" unique_id=1324155158]
 
@@ -84,10 +85,14 @@ position = Vector2(630, 300)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1321552731]
 
+[node name="PowerUp" type="Area2D" parent="." unique_id=1002144668]
+script = ExtResource("13_64w2a")
+
 [connection signal="body_entered" from="Cereja" to="Cereja" method="_on_body_entered"]
 [connection signal="body_entered" from="Cereja2" to="Cereja2" method="_on_body_entered"]
 [connection signal="body_entered" from="Cereja3" to="Cereja3" method="_on_body_entered"]
 [connection signal="body_entered" from="Cereja4" to="Cereja4" method="_on_body_entered"]
 [connection signal="body_entered" from="Cereja5" to="Cereja5" method="_on_body_entered"]
+[connection signal="focus_entered" from="Placa/Mensagem" to="Placa" method="_on_mensagem_focus_entered"]
 
 [editable path="Placa"]

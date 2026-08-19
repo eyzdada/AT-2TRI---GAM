@@ -1,3 +1,43 @@
 [gd_scene format=3 uid="uid://d1g0xr4a5yg25"]
 
-[node name="PowerUp" type="Node2D" unique_id=1564681834]
+[ext_resource type="Script" uid="uid://d1ncxegmtf3ri" path="res://scripts/PowerUp.gd" id="1_lg734"]
+[ext_resource type="Texture2D" uid="uid://cjj6nuk7ujg6v" path="res://artes/Coletaveis e Efeitos/Sunnyland items/Sprites/gem/gem-1.png" id="2_44opf"]
+[ext_resource type="Texture2D" uid="uid://birwk1x3rfd5x" path="res://artes/Coletaveis e Efeitos/Sunnyland items/Sprites/gem/gem-2.png" id="3_uk8c5"]
+[ext_resource type="Texture2D" uid="uid://csqmfygc15xuv" path="res://artes/Coletaveis e Efeitos/Sunnyland items/Sprites/gem/gem-3.png" id="4_dl11v"]
+[ext_resource type="Texture2D" uid="uid://cpjvlgsqfcvpq" path="res://artes/Coletaveis e Efeitos/Sunnyland items/Sprites/gem/gem-4.png" id="5_mp8ed"]
+[ext_resource type="Texture2D" uid="uid://hg3wtxeojg4f" path="res://artes/Coletaveis e Efeitos/Sunnyland items/Sprites/gem/gem-5.png" id="6_eimnv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_r4msk"]
+radius = 7.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8wi8e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_44opf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_uk8c5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dl11v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_mp8ed")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_eimnv")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Area2D" type="Area2D" unique_id=863103614]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1554703479]
+shape = SubResource("CircleShape2D_r4msk")
+script = ExtResource("1_lg734")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1851852249]
+sprite_frames = SubResource("SpriteFrames_8wi8e")
