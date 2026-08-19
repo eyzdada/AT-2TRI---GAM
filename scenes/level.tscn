@@ -8,10 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://dm4llwt7k3v50" path="res://scenes/player.tscn" id="6_player"]
 [ext_resource type="PackedScene" path="res://scenes/placa.tscn" id="7_placa"]
 [ext_resource type="PackedScene" uid="uid://dirpvn4q6s02i" path="res://scenes/cereja.tscn" id="8_cereja"]
-[ext_resource type="PackedScene" path="res://scenes/inimigo.tscn" id="9_inimigo"]
+[ext_resource type="PackedScene" uid="uid://c526ioqdthqs3" path="res://scenes/inimigo.tscn" id="9_inimigo"]
 [ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="10_killzone"]
 [ext_resource type="PackedScene" uid="uid://cehldju8r0g0w" path="res://scenes/hud.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="12_pause"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r4msk"]
+size = Vector2(25, 15)
 
 [node name="Level" type="Node2D" unique_id=1324155158]
 
@@ -40,6 +43,10 @@ texture = ExtResource("3_bush")
 [node name="Pedra" type="Sprite2D" parent="Decoracao" unique_id=1004459483]
 position = Vector2(592, 185)
 texture = ExtResource("4_rock")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Decoracao/Pedra" unique_id=1333713088]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_r4msk")
 
 [node name="Pinheiro" type="Sprite2D" parent="Decoracao" unique_id=1423531173]
 position = Vector2(1200, 127)
@@ -73,10 +80,10 @@ offset_right = -136.0
 offset_bottom = -63.0
 
 [node name="Inimigo" parent="." unique_id=1651378193 instance=ExtResource("9_inimigo")]
-position = Vector2(936, 178)
+position = Vector2(936, 180)
 
 [node name="Killzone" parent="." unique_id=1988151611 instance=ExtResource("10_killzone")]
-position = Vector2(640, 300)
+position = Vector2(630, 300)
 
 [node name="HUD" parent="." unique_id=1259305448 instance=ExtResource("11_hud")]
 
