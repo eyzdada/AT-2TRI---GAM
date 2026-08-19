@@ -91,4 +91,10 @@ position = Vector2(630, 300)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1321552731]
 
+[connection signal="body_entered" from="Cereja" to="Cereja" method="_on_body_entered"]
+[connection signal="body_entered" from="Cereja2" to="Cereja2" method="_on_body_entered"]
+[connection signal="body_entered" from="Cereja3" to="Cereja3" method="_on_body_entered"]
+[connection signal="body_entered" from="Cereja4" to="Cereja4" method="_on_body_entered"]
+[connection signal="body_entered" from="Cereja5" to="Cereja5" method="_on_body_entered"]
+
 [editable path="Placa"]

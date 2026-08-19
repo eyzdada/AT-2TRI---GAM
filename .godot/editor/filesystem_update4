@@ -6,3 +6,4 @@ res://scripts/hud.gd
 res://scripts/cereja.gd
 res://scenes/cereja.tscn
 res://scenes/inimigo.tscn
+res://scripts/placa.gd

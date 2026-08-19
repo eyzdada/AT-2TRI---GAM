@@ -39,7 +39,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="Circle_cereja"]
-radius = 8.0
+radius = 10.049875
 
 [node name="Cereja" type="Area2D" unique_id=493337679]
 script = ExtResource("1_scr")
