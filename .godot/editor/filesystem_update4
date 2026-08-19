@@ -1,0 +1,7 @@
+res://scenes/level.tscn
+res://resources/ground_tileset.tres
+res://scripts/placa.gd
+res://scenes/player.tscn
+res://scripts/player.gd
+res://scenes/PowerUp.tscn
+res://scripts/PowerUp.gd

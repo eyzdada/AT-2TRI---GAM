@@ -12,7 +12,7 @@
 [ext_resource type="PackedScene" path="res://scenes/killzone.tscn" id="10_killzone"]
 [ext_resource type="PackedScene" uid="uid://cehldju8r0g0w" path="res://scenes/hud.tscn" id="11_hud"]
 [ext_resource type="PackedScene" path="res://scenes/pause_menu.tscn" id="12_pause"]
-[ext_resource type="Script" uid="uid://d1ncxegmtf3ri" path="res://scripts/PowerUp.gd" id="13_64w2a"]
+[ext_resource type="PackedScene" uid="uid://d1g0xr4a5yg25" path="res://scenes/PowerUp.tscn" id="13_64w2a"]
 
 [node name="Level" type="Node2D" unique_id=1324155158]
 
@@ -72,6 +72,7 @@ offset_left = -72.0
 offset_top = -80.0
 offset_right = 70.0
 offset_bottom = -64.0
+text = ""
 
 [node name="Inimigo" parent="." unique_id=1651378193 instance=ExtResource("9_inimigo")]
 position = Vector2(936, 180)
@@ -85,8 +86,8 @@ position = Vector2(630, 300)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1321552731]
 
-[node name="PowerUp" type="Area2D" parent="." unique_id=1002144668]
-script = ExtResource("13_64w2a")
+[node name="PowerUp" parent="." unique_id=863103614 instance=ExtResource("13_64w2a")]
+position = Vector2(406, 183)
 
 [connection signal="body_entered" from="Cereja" to="Cereja" method="_on_body_entered"]
 [connection signal="body_entered" from="Cereja2" to="Cereja2" method="_on_body_entered"]

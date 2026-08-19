@@ -5,8 +5,7 @@ var SPEED: float = 200.0
 var JUMP_VELOCITY: float = -400.0
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
-
-
+	
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
@@ -23,8 +22,18 @@ func _physics_process(delta: float) -> void:
 
 	_update_animation(direction, pode_andar)
 	move_and_slide()
+
 func brilhar() -> void:
 	$Particulas.restart()
+
+func adicionar_velocidade_temporaria(bonus: float, tempo: float) -> void:
+	SPEED += bonus
+	brilhar()
+	
+	if tempo > 0:
+		await get_tree().create_timer(tempo).timeout
+		SPEED -= bonus
+
 func _update_animation(direction: float, pode_andar: bool) -> void:
 	if direction != 0.0:
 		animated_sprite.flip_h = direction < 0.0
